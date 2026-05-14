@@ -1,0 +1,193 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vinayaka Construction</title>
+  <link rel="stylesheet" href="style.css"/>
+<script>
+  if (localStorage.getItem("loggedIn") !== "true") {
+    window.location.href = "vk.html";
+  }
+</script>
+</head>
+<body> 
+  <header class="navbar">
+    <div class="logo">Vinayaka Builders</div>
+    <nav>
+      
+      <ul>
+        <li><a href="vk.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Contact.html">Contact</a></li>   
+      </ul>
+    </nav>
+    <a href="quotation.pdf" class="quote-btn">GET A QUOTE</a> 
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>We Build the Future</h1>
+      <p>High-quality residential, commercial, and industrial construction</p>
+    </div>
+  </section>
+
+  <section class="section-title">
+    <h2>Our Projects</h2>
+    <p>Latest Works</p>
+  </section>
+
+  <section class="projects">
+    <div class="project-card"><img src="https://i.ibb.co/5Wxff8WK/modern-brutalist-residence-scaled.webp" /><h3>residential</h3></div>
+    <div class="project-card"><img src="https://i.ibb.co/svpWTqN6/Prestige-Golfshire-Villa-1.jpg" /><h3>Luxury Villa</h3></div>
+    <div class="project-card"><img src="https://i.ibb.co/gbwdqxyg/1-varikkasseri-mana-palakkad-kerala-attr-hero.jpg"/><h3>Traditional building</h3></div>
+  </section>
+
+  <section class="services-section">
+    <h2 class="section-title">Our Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2942/2942877.png" alt="Planning Icon">
+        <h3>Planning & Design</h3>
+        <p>We offer smart architectural planning for residential and commercial projects.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3062/3062634.png" alt="Construction Icon">
+        <h3>Construction</h3>
+        <p>High-quality and cost-effective construction using modern techniques.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/854/854878.png" alt="Painting Icon">
+        <h3>Painting & Finishing</h3>
+        <p>Interior and exterior painting with professional finishing touches.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/831/831681.png" alt="Cleaning Icon">
+        <h3>Post-Construction Cleaning</h3>
+        <p>Detailed cleaning after construction so your space is ready to use.</p>
+      </div>
+    </div>
+  </section>
+  
+
+  <section class="counters-section" id="counters">
+    <div class="counters-container">
+      <div class="counter-box">
+        <h2 class="counter" data-target="250">0</h2>
+        <p>Projects Completed</p>
+      </div>
+      <div class="counter-box">
+        <h2 class="counter" data-target="120">0</h2>
+        <p>Satisfied Clients</p>
+      </div>
+      <div class="counter-box">
+        <h2 class="counter" data-target="10">0</h2>
+        <p>Years of Experience</p>
+      </div>
+      <div class="counter-box">
+        <h2 class="counter" data-target="15">0</h2>
+        <p>Ongoing Projects</p>
+      </div>
+    </div>
+  </section>
+  
+<footer class="footer-section">
+    <div class="footer-overlay">
+      <div class="footer-container">
+        <!-- Left Side: About -->
+        <div class="footer-col">
+          <h3 class="footer-title">Vinayaka Builders</h3>
+          <p>We specialize in high-quality construction services for residential, commercial, and industrial spaces.</p>
+        </div>
+  
+        <!-- Center: Navigation Links -->
+        <div class="footer-col">
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="vk.html">Home</a></li>
+            <li><a href="About.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <!DOCTYPE html>
+
+
+  
+        <!-- Right Side: Contact -->
+        <div class="footer-col">
+          <h3 class="footer-title">Contact Us</h3>
+          <p>Email: info@vinayakabuilders.com</p>
+          <p>Phone: +91 8105125012</p>
+          <p>Address: 123 Main Street, Jalahalli,  Bangalore</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Vinayaka Builders. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <footer>
+    <p>© 2025 Vinayaka Builders. All rights reserved.</p>
+  </footer>
+  <script>
+    const counters = document.querySelectorAll('.counter');
+    let animated = false;
+  
+    function animateCounters() {
+      if (animated) return;
+  
+      const sectionTop = document.getElementById('counters').getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+  
+      if (sectionTop < windowHeight - 100) {
+        counters.forEach(counter => {
+          const target = +counter.getAttribute('data-target');
+          let count = 0;
+          const step = target / 100;
+  
+          const updateCount = () => {
+            count += step;
+            if (count < target) {
+              counter.textContent = Math.ceil(count);
+              requestAnimationFrame(updateCount);
+            } else {
+              counter.textContent = target;
+            }
+          };
+  
+          updateCount();
+        });
+        animated = true;
+      }
+    }
+  
+    window.addEventListener('scroll', animateCounters);
+  </script>
+ <!-- WhatsApp Floating Button -->
+<a href="https://wa.me/8105125013" class="whatsapp-float" target="_blank">
+  <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp">
+</a>
+
+<style>
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+}
+</style>
+<button onclick="logout()">Logout</button>
+
+<script>
+  function logout() {
+    localStorage.setItem("loggedIn", "false");
+    window.location.href = "login.html";
+  }
+</script>
+
+</body>
+</html>

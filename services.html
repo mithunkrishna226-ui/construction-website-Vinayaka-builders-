@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <div class="disclaimer-bar">
+  <marquee behavior="scroll" direction="left" scrollamount="6">
+    ⚠️ The amount displayed in the quotation you receive is negotiable. Please contact us for final pricing and further discussion.
+  </marquee>
+</div>
+
+  <section class="core-services">
+    <h2>Our Core Services</h2>
+    <div class="services">
+      <!-- Service items -->
+    </div>
+  </section>
+  
+  <link rel="stylesheet" href="services.css" />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Services</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet"/>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Core Services Section -->
+  <section>
+    <h2>Our Core Services</h2>
+    <div class="services">
+      <div class="service-card">
+        <i class="fas fa-home"></i>
+        <h3>Residential Construction</h3>
+        <p>Complete home building solutions from concept to creation.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-building"></i>
+        <h3>Commercial Projects</h3>
+        <p>Office, retail, and complex construction with efficiency.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-paint-roller"></i>
+        <h3>Painting & Finishing</h3>
+        <p>Expert painting and detailing services for a polished look.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-tools"></i>
+        <h3>Renovation & Remodeling</h3>
+        <p>Upgrade and modernize your space to match your vision.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-broom"></i>
+        <h3>Post-Construction Cleaning</h3>
+        <p>Detailed site cleaning to ensure a move-in-ready finish.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-drafting-compass"></i>
+        <h3>Architecture & Planning</h3>
+        <p>Smart and sustainable designs tailored to your needs.</p>
+      </div>
+    </div>
+  </section>
+  <!-- Featured Process Section -->
+  <section class="process">
+    <h2>Our Construction Process</h2>
+    <div class="process-steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-desc">Initial Consultation & Requirement Gathering</div>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-desc">Site Inspection & Feasibility Study</div>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-desc">Design & Planning Approval</div>
+      </div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <div class="step-desc">Construction & Quality Checks</div>
+      </div>
+      <div class="step">
+        <div class="step-number">5</div>
+        <div class="step-desc">Finishing, Handover & Support</div>
+      </div>
+    </div>
+  </section>
+  <div class="scrolling-gallery">
+  <div class="gallery-track">
+    <img src="https://i.ibb.co/5Wxff8WK/modern-brutalist-residence-scaled.webp" alt="Building 1" />
+    <img src="https://i.ibb.co/svpWTqN6/Prestige-Golfshire-Villa-1.jpg"/>
+    <img src="https://i.ibb.co/gbwdqxyg/1-varikkasseri-mana-palakkad-kerala-attr-hero.jpg" alt="Building 3" />
+    <img src="https://i.ibb.co/HDP8sJ5X/y-NZPvg-Jed-Xy-NZG7-Fv-DMHTC.jpg" alt="Building 4" />
+    <img src="https://i.ibb.co/Y4GkzWPy/shutterstock-711255955-scaled-1800x750.webp" alt="Building 5" />
+    <!-- Duplicate for smooth loop -->
+    <img src="https://i.ibb.co/5Wxff8WK/modern-brutalist-residence-scaled.webp" alt="Building 1" />
+    <img src="https://i.ibb.co/svpWTqN6/Prestige-Golfshire-Villa-1.jpg"/> />
+  </div>
+</div>
+
+  
+
+  <!-- Testimonials Section -->
+  <section>
+    <h2>What Our Clients Say</h2>
+    <div class="testimonials">
+      <div class="testimonial-card">
+        <p>“Vinayaka Builders turned our dream home into reality. Professional, punctual, and high quality!”</p>
+        <div class="testimonial-author">– Ramesh K.</div>
+      </div>
+      <div class="testimonial-card">
+        <p>“Outstanding commercial space delivered on time. Highly recommend their services!”</p>
+        <div class="testimonial-author">– Anita S.</div>
+      </div>
+      <div class="testimonial-card">
+        <p>“Their renovation team transformed our outdated space into a modern masterpiece. Thank you!”</p>
+        <div class="testimonial-author">– Vikram T.</div>
+      </div>
+    </div>
+  </section>
+  <section id="quotation">
+    <h2>Get Your Construction Quotation</h2>
+    <p>Fill in your details and get a quotation estimate in Indian Rupees (₹).</p>
+    
+    <form id="quoteForm">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required>
+      
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="constructionType">Type of Construction</label>
+      <select id="constructionType" name="constructionType" required>
+        <option value="" disabled selected>Select type</option>
+        <option value="Residential">Residential</option>
+        <option value="Commercial">Commercial</option>
+        <option value="Industrial">Industrial</option>
+      </select>
+      
+      <label for="projectSize">Project Size (in sqft)</label>
+      <input type="number" id="projectSize" name="projectSize" required min="100">
+  
+      <button type="button" id="generateQuote">Generate Quotation (₹)</button>
+    </form>
+    
+    <div id="quoteResult"></div>
+  </section>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Construction Quotation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  </head>
+  <body>
+  
+    <!-- Your quotation form HTML goes here -->
+  
+    <!-- ↓ JavaScript goes here at the end of body -->
+    <script>
+      // Wait for jsPDF to load
+      window.onload = () => {
+        const { jsPDF } = window.jspdf;
+  
+        document.getElementById('generateQuote').addEventListener('click', function() {
+          const name = document.getElementById('name').value.trim();
+          const phone = document.getElementById('phone').value.trim();
+          const email = document.getElementById('email').value.trim();
+          const constructionType = document.getElementById('constructionType').value;
+          const size = Number(document.getElementById('projectSize').value);
+  
+          if (!name || !phone || !email || !constructionType || size < 100) {
+            alert('Please fill all fields correctly. Project size must be at least 100 sqft.');
+            return;
+          }
+  
+          const pricing = {
+            Residential: 1500,
+            Commercial: 2000,
+            Industrial: 2500
+          };
+  
+          const pricePerSqft = pricing[constructionType];
+          const totalPrice = size * pricePerSqft;
+  
+          const resultDiv = document.getElementById('quoteResult');
+          resultDiv.textContent = `Estimated Price: ₹${totalPrice.toLocaleString('en-IN')}`;
+  
+          const doc = new jsPDF();
+          doc.setFontSize(18);
+          doc.text('Construction Quotation', 105, 20, null, null, 'center');
+          doc.setFontSize(12);
+          doc.text(`Name: ${name}`, 20, 40);
+          doc.text(`Phone: ${phone}`, 20, 50);
+          doc.text(`Email: ${email}`, 20, 60);
+          doc.text(`Type of Construction: ${constructionType}`, 20, 70);
+          doc.text(`Project Size: ${size} sqft`, 20, 80);
+          doc.text(`Rate per sqft: ₹${pricePerSqft}`, 20, 90);
+          doc.text('--------------------------------------', 20, 100);
+          doc.setFontSize(14);
+          doc.text(`Total Estimated Cost: ₹${totalPrice.toLocaleString('en-IN')}`, 20, 110);
+          doc.setFontSize(10);
+          doc.text('Thank you for considering our services.', 20, 130);
+          doc.text('Vinayaka Builders', 20, 140);
+          doc.save(`Quotation_${name.replace(/\s+/g, '_')}.pdf`);
+        });
+      };
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+    
+  </body>
+  </html>
+    
+  
+  <section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <button class="faq-question">What services do you offer?</button>
+      <div class="faq-answer">
+        <p>We offer complete building services including architecture, civil work, plumbing, electrical installations, painting, and post-construction cleaning.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">How do I request a quote?</button>
+      <div class="faq-answer">
+        <p>You can request a quote by filling out the contact form or reaching out to us directly via phone or WhatsApp.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Are your services customizable?</button>
+      <div class="faq-answer">
+        <p>Yes, we tailor our construction and finishing solutions to meet your specific requirements.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Do you provide post-construction cleaning?</button>
+      <div class="faq-answer">
+        <p>Yes, our services include detailed post-paint and post-construction cleaning to ensure the site is ready for use.</p>
+      </div>
+    </div>
+  </section>
+  <script>
+    const questions = document.querySelectorAll(".faq-question");
+  
+    questions.forEach((question) => {
+      question.addEventListener("click", () => {
+        const answer = question.nextElementSibling;
+        const isOpen = answer.style.maxHeight;
+  
+        document.querySelectorAll(".faq-answer").forEach((ans) => {
+          ans.style.maxHeight = null;
+        });
+  
+        if (!isOpen) {
+          answer.style.maxHeight = answer.scrollHeight + "px";
+        }
+      });
+    });
+  </script>
+    
+</body>
+</html>
